@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ee2b5b",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221015",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Chat with Chloe</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<div class="relative">
+<div class="size-11 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of a smiling young woman with dark hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPE49LorK-fH1zh9z9DETc-mOD-KX8-iXaGMxUZHobJ7qmmxlXrOroHvEtw6R_v9jQZMkeCn3S7mPUAeicZVfMnrhAy9m5Zx9bQ1wTQljEQ5aTkxSdum_wYB3Vsv4yMvymrPChzYne1CXldF7TZ05s9fFHlWsAlnESWaftmHU9IFI_Uq2UgsFBO_LYms4gKjOfW65BeunqQi2zSYqKfLcslGodXwoiU4hMfDaMQg9v5KQj9-CXYt9Q2gPdmNR7HW7Dq7WujeyYnNgP")'></div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-background-light dark:border-background-dark rounded-full"></div>
+</div>
+<div>
+<h2 class="text-base font-bold leading-tight">Chloe</h2>
+<p class="text-[11px] text-primary font-medium uppercase tracking-wider">Online now</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-primary/10 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="p-2 rounded-full hover:bg-primary/10 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-6">
+<div class="flex justify-center">
+<span class="text-[11px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest bg-slate-100 dark:bg-slate-800/50 px-3 py-1 rounded-full">Today</span>
+</div>
+<div class="flex items-end gap-2 max-w-[85%]">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 mb-1" data-alt="Small profile thumbnail of Chloe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtpxhT2oWcVtCjSMBJ3pIj1XHICszACjQFXcXsfgKWlQGagu-Mpa5DcygLIoCgQG2MX1BX3HfYUIQIkqFxJCpzNHYLf4GOySnFCRfkZ275xn45zC9zzkJelXmVYmU1qb0R60gsG9b9k-VZ5gNw040KMNIIbT0CzfFGr8DnYgjPfy9a8lLkpViPGZ0h81XSGDDF4HODv85D2k6oBWOSV2VcIgrDljL85WY7d4Dk-XGl2bzie7aQMMtOT6yvH0RhpGmfEc2AodpsrWh9")'></div>
+<div class="flex flex-col gap-1">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl rounded-bl-none shadow-sm border border-slate-100 dark:border-slate-700">
+<p class="text-sm leading-relaxed">Hey Alex! I saw on your profile that you're a fan of street photography. Did you catch the new exhibition downtown? 📸</p>
+</div>
+<span class="text-[10px] text-slate-400 ml-1">10:24 AM</span>
+</div>
+</div>
+<div class="flex flex-row-reverse items-end gap-2 max-w-[85%] ml-auto">
+<div class="flex flex-col items-end gap-1">
+<div class="bg-primary p-4 rounded-2xl rounded-br-none shadow-md shadow-primary/20">
+<p class="text-sm leading-relaxed text-white">Oh hey! Yes, I actually went there last Saturday. The black and white series was absolutely stunning. Have you been yet?</p>
+</div>
+<div class="flex items-center gap-1 mr-1">
+<span class="text-[10px] text-slate-400">10:28 AM</span>
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+</div>
+</div>
+</div>
+<div class="flex items-end gap-2 max-w-[85%]">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 mb-1" data-alt="Small profile thumbnail of Chloe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC11xQp-HDn5jJWsvEqyR2dGcMtavtbKrHNBZhDH_ugzL89Yz2wQYAx34mNuMZrPY5d9AgSEIyCLnx8D5gDjWoXf15HfrNCBHLhdGpvXc2eUNc95PCCCSEbSKkQrRZsbsGADKN1iPTUhie80uqr6NnFrldtDGehdfIvv_h9jzqE_MHOLvLYjTvYoTFA3QrizI5QXHwyD7YO5Wb6ArDmYYddqZ8jgPI-w1hTEZc8f5HXP5_VFKgMwgLpfuZWWOXiJj-lLm0N4lgzt3gb")'></div>
+<div class="flex flex-col gap-1">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl rounded-bl-none shadow-sm border border-slate-100 dark:border-slate-700">
+<p class="text-sm leading-relaxed">Not yet! I was planning to go this weekend. Would you want to go again and show me your favorite pieces? I'd love a pro's perspective! 😊</p>
+</div>
+<span class="text-[10px] text-slate-400 ml-1">10:30 AM</span>
+</div>
+</div>
+<div class="flex flex-row-reverse items-end gap-2 max-w-[85%] ml-auto">
+<div class="flex flex-col items-end gap-1">
+<div class="bg-primary p-4 rounded-2xl rounded-br-none shadow-md shadow-primary/20">
+<p class="text-sm leading-relaxed text-white">I'd love to! I definitely don't mind a second look. How about Sunday afternoon?</p>
+</div>
+<div class="flex items-center gap-1 mr-1">
+<span class="text-[10px] text-slate-400">10:32 AM</span>
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+</div>
+</div>
+</div>
+<div class="flex items-end gap-2 max-w-[85%]">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 mb-1" data-alt="Small profile thumbnail of Chloe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu_MffUdNZnS-nKONFajUjB9xQy-E-6ePgqien5-8TIzwohWqYTFOXOiEdHEg1aIrjk0j7TPJeY8GsVWDLnV9ALEHmQmITxLGln11mBKjfgMB9pEIA0jKnXMIGE8ndA0d5YCaSgFnnK8BZC9ML1o2ZfY3jMuk-DlX3umwyghQsFQUXAs6HF4x_aLdpXZ7TMUJjfNGmHyaTlASlaGXDkOyiAs3xcciOH-O81dvXXV7P9fNd46KxylJgp-NRJV8RX1lvxoW7oM6v3bV-")'></div>
+<div class="flex flex-col gap-1">
+<div class="bg-white dark:bg-slate-800 px-4 py-3 rounded-2xl rounded-bl-none shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-1">
+<div class="flex gap-1">
+<span class="w-1.5 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-bounce"></span>
+<span class="w-1.5 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+<span class="w-1.5 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-4 bg-background-light dark:bg-background-dark border-t border-primary/10">
+<div class="max-w-4xl mx-auto flex items-center gap-3">
+<button class="flex items-center justify-center p-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<div class="flex-1 relative flex items-center">
+<input class="w-full bg-white dark:bg-slate-800 border-none rounded-full py-3 px-5 pr-12 text-sm focus:ring-2 focus:ring-primary/20 shadow-inner placeholder:text-slate-400 dark:placeholder:text-slate-500 text-slate-900 dark:text-slate-100" placeholder="Type a message..." type="text"/>
+<button class="absolute right-2 p-1.5 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">mood</span>
+</button>
+</div>
+<button class="size-11 flex items-center justify-center bg-primary text-white rounded-full shadow-lg shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</footer>
+</body></html>

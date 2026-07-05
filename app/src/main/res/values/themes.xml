@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.MerrageApp" parent="Theme.MaterialComponents.Light" />
+</resources>

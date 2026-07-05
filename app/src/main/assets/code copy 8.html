@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b5b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Edit Profile - Dating App</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-primary/10">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Edit Profile</h2>
+<div class="flex w-12 items-center justify-end">
+<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0 cursor-pointer">Save</p>
+</div>
+</div>
+<div class="max-w-2xl mx-auto w-full pb-10">
+<!-- Photos Section -->
+<div class="flex items-center justify-between px-4 pt-6 pb-2">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Photos</h3>
+<span class="text-xs font-medium text-slate-500 uppercase tracking-wider">6 / 9</span>
+</div>
+<div class="grid grid-cols-3 gap-3 p-4">
+<!-- Main Photo -->
+<div class="relative col-span-2 row-span-2 aspect-[3/4] bg-primary/5 rounded-xl border-2 border-dashed border-primary/20 flex items-center justify-center overflow-hidden bg-cover bg-center" data-alt="Portrait of a smiling woman outdoors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAewKP85eWVlGgjirJ_TbNwroH1V4uCL3ISXx5esECaxQ_sBVZQJW2Gzp79YhaknSsb6JM5mnq3fnOuXZrmYMYs4yHS9HzkfaRKld8uBFhCKKTK2Xjw902Dancv19u2qZqCIkchqnyl4yzAsCQMILkETja1lOhW1mV5hNLwWjWdtA6nxS3BqmXDy2iQMxyeiLTDtS3DaJJDIjxYBWNU_4FiFMwUdNG8Gjn1vjdEtPWjeZR0vmiSDuFduwtEdL45_sKtZP75Vp89s8DO");'>
+<button class="absolute bottom-2 right-2 size-8 bg-primary text-white rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<!-- Small Photos -->
+<div class="relative aspect-square bg-primary/5 rounded-xl border-2 border-dashed border-primary/20 flex items-center justify-center overflow-hidden bg-cover bg-center" data-alt="Lifestyle photo of a woman in a cafe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4oPCEZTWif3BHIohVDjNP5CWiQrL8xpBJh2Ma7x3c1RNq-isvp7ykb1uWLrH7KgPtH-Hqo61LJfSVAkyMhQXxg0xyaVc7j4mtInu0RpMpQAM3pKpBu34x4-omQUeIY_aQHavApJ75jaOzU-x3dpTkRLF67_F9tRKfc4y7rEt2ukz1QfdkzyqFMrA1yxWuCRBGKbxgrZrXhvBPD1oXn_urO2zHqVbKdpNHWPqlLl0SLj6ekg7tytq-9SDAjvPgymXPxbdbHdHHYoyB");'>
+<button class="absolute -top-1 -right-1 size-6 bg-slate-900/50 text-white rounded-full flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-xs">close</span>
+</button>
+</div>
+<div class="relative aspect-square bg-primary/5 rounded-xl border-2 border-dashed border-primary/20 flex items-center justify-center overflow-hidden bg-cover bg-center" data-alt="Close up portrait photography of a person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARmLTYYAyky-_oPNytjQFiME3zcK5zppytNlSpyJHcHQTs39Y-DE5mE9VRVsb0yeqfYLjL3xFaHdHWB-saEW-a7ydD2Ys7PZWB76NJo8YuNZPFNyymP2th4pouEAIO14uXPh19Vj1RdE5yTm5zqBLYFiWddbQ0ZNjMAL-d_TSTjYMv2abE1TZEaxb3buZM1IV2Wso0qatYwrApFEOeneDkqW1URxg5kYOsbgdi9L-UR3uDoZWa3YNHtQGNf_k8RGzDtlyQwN8OiPp7");'>
+<button class="absolute -top-1 -right-1 size-6 bg-slate-900/50 text-white rounded-full flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-xs">close</span>
+</button>
+</div>
+<div class="relative aspect-square bg-primary/10 rounded-xl border-2 border-dashed border-primary/30 flex items-center justify-center cursor-pointer group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">add_circle</span>
+</div>
+<div class="relative aspect-square bg-primary/10 rounded-xl border-2 border-dashed border-primary/30 flex items-center justify-center cursor-pointer group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">add_circle</span>
+</div>
+<div class="relative aspect-square bg-primary/10 rounded-xl border-2 border-dashed border-primary/30 flex items-center justify-center cursor-pointer group">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">add_circle</span>
+</div>
+</div>
+<!-- About Me Section -->
+<div class="px-4 pt-6">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-2">About Me</h3>
+<div class="bg-white dark:bg-primary/5 rounded-xl p-4 border border-primary/10">
+<label class="flex flex-col w-full">
+<p class="text-slate-500 text-sm font-medium leading-normal pb-2 uppercase tracking-wide">Bio</p>
+<textarea class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-primary/10 bg-background-light dark:bg-background-dark/50 min-h-36 placeholder:text-slate-400 p-4 text-base font-normal leading-normal" placeholder="Tell them something interesting about you...">Adventure seeker and coffee enthusiast. Usually found exploring local hiking trails or hunting for the best sourdough in town. Let's find a new place to get lost together! ☕️⛰️</textarea>
+</label>
+</div>
+</div>
+<!-- Interests Section -->
+<div class="px-4 pt-8">
+<div class="flex items-center justify-between pb-3">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Interests</h3>
+<button class="text-primary text-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">add</span> Add More
+                    </button>
+</div>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">
+<span>Hiking</span>
+<span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">
+<span>Photography</span>
+<span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">
+<span>Travel</span>
+<span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary dark:text-primary rounded-full text-sm font-semibold border border-primary/20">
+<span>Art</span>
+<span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary dark:text-primary rounded-full text-sm font-semibold border border-primary/20">
+<span>Wine</span>
+<span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary dark:text-primary rounded-full text-sm font-semibold border border-primary/20">
+<span>Concerts</span>
+<span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+</div>
+</div>
+<!-- Basic Info Section -->
+<div class="px-4 pt-8">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-3">Basic Info</h3>
+<div class="flex flex-col gap-4 bg-white dark:bg-primary/5 rounded-xl border border-primary/10 overflow-hidden">
+<div class="flex items-center gap-4 p-4 border-b border-primary/5 hover:bg-primary/5 cursor-pointer transition-colors">
+<div class="bg-primary/10 p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div class="flex-1">
+<p class="text-xs text-slate-500 uppercase font-semibold">Occupation</p>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-slate-900 dark:text-slate-100 font-medium" type="text" value="UI/UX Designer"/>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 border-b border-primary/5 hover:bg-primary/5 cursor-pointer transition-colors">
+<div class="bg-primary/10 p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex-1">
+<p class="text-xs text-slate-500 uppercase font-semibold">Location</p>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-slate-900 dark:text-slate-100 font-medium" type="text" value="New York, NY"/>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 hover:bg-primary/5 cursor-pointer transition-colors">
+<div class="bg-primary/10 p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div class="flex-1">
+<p class="text-xs text-slate-500 uppercase font-semibold">Education</p>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-slate-900 dark:text-slate-100 font-medium" placeholder="Add school" type="text"/>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Location Map Mini View -->
+<div class="px-4 pt-6">
+<div class="relative h-32 w-full rounded-xl overflow-hidden border border-primary/10">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 grayscale" data-alt="Stylized map showing city streets" data-location="New York" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTh7imPCgnHQ3r8iZIce8zZcjrebiR4JnuJQqfuRIsYXXzXODxK03A7aYsje9JZFsBIoYBVIw4i1Z9vcGBkov-ekUY5LUych7dahmsoJUkA0IE55k0SYhbCcFoqhQKc_IHGmS-3TT2V76aKzuUAXaCTnYjlN2gTz2kzgGEWvE1jbN_v9SLP2M6xTQKbluhCQTcG4GEagwfaMo_jtyVUF-_ECvrbVmRMplaWbMIKeA-9W7oxju83V-_kZbXyjI5BeKgUBvx6NG-e6Aj");'></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white dark:bg-background-dark p-2 rounded-full shadow-lg border-2 border-primary">
+<span class="material-symbols-outlined text-primary fill-1">location_on</span>
+</div>
+</div>
+</div>
+<p class="text-center text-xs text-slate-500 pt-2 italic">Your exact location isn't shown to others.</p>
+</div>
+</div>
+<!-- Sticky Bottom Save Action for Mobile -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent md:hidden">
+<button class="w-full bg-primary text-white font-bold py-4 rounded-full shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+                Preview Profile
+            </button>
+</div>
+</div>
+</body></html>

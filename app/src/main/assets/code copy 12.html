@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soulmate - Likes &amp; Matches</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ee2b5b",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221015",
+              },
+              fontFamily: {
+                "display": ["Plus Jakarta Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<div class="flex size-10 shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-primary">Soulmate</h1>
+<div class="flex size-10 items-center justify-end text-primary">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</div>
+</div>
+<!-- Tabs Section -->
+<div class="max-w-md mx-auto w-full px-4">
+<div class="flex border-b border-primary/10">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-4 flex-1" href="#">
+<p class="text-sm font-bold tracking-wide">Likes</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4 flex-1" href="#">
+<p class="text-sm font-bold tracking-wide">Matches</p>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full pb-24">
+<!-- Upgrade CTA Card -->
+<div class="m-4 p-5 rounded-xl bg-gradient-to-br from-primary to-pink-600 text-white shadow-lg shadow-primary/20">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold">See who likes you</h3>
+<span class="material-symbols-outlined">stars</span>
+</div>
+<p class="text-sm opacity-90 mb-4 font-medium">Upgrade to Gold to reveal 42 people who already swiped right on you!</p>
+<button class="w-full py-2.5 bg-white text-primary rounded-full font-bold text-sm tracking-wide shadow-sm">
+                Get Soulmate Gold
+            </button>
+</div>
+<!-- Grid Section Label -->
+<div class="px-4 py-2 flex items-center justify-between">
+<h2 class="text-lg font-bold">42 People Liked You</h2>
+<span class="text-xs font-semibold text-primary px-2 py-1 bg-primary/10 rounded-full">New</span>
+</div>
+<!-- Likes Grid -->
+<div class="grid grid-cols-2 gap-3 px-4 py-2">
+<!-- Liked User Card 1 (Blurred) -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center blur-md scale-110" data-alt="Blurred profile photo of a young woman smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVzTcD4wMem1N_oL4kAiHSC0v6ETzZlwgf88atXYv7FPnBsiJ_M2-bO8KW73iKKys81h2l1TmsffvXOzXKdxtG7mSDsf9T_Hl-Fd3XrnV0Toxsw_RgvtgfvV6Hq1djtAdZktBgA2rVixyO2wiMBDTvq7eJfkVFsHWHddUQm2azNIThRicGl7pDlkaKb0COz9MDB0UfNLJ-J7o1NrqX-VntHLcsrWF3txsrJe4GaxJsUuNeye4c_cTnwXRPSQPsf8YZGuicH9IfSJUc')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-0 left-0 p-3 w-full">
+<p class="text-white font-bold text-sm">Anna, 24</p>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 shadow-md">
+<span class="material-symbols-outlined text-xs">lock</span>
+</div>
+</div>
+<!-- Liked User Card 2 (Blurred) -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center blur-md scale-110" data-alt="Blurred profile photo of a person at a café" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQCRf8rMkLAHj4fXsZPEezeZGg97ESCQhoBOM8lwvSgeFqhmAzFIg6tqLiat7hne8uvQjx9ub6GOc71epdpHGv0kiK5KoYhX_msjb8H5FEz-yajQURuyu8FZGBco7Jb11MPkOtJRPo83H_-Hg7d7F7g6kFJ0nX9CvzdlC9YmYuvssZmiTccgysH9y-KmL_lsGAOIWAY0RX9fuYIw4o9eY0GuPRUDzwfUuiz3_8XcQZ0qqzZY4eHnWNQKUm4jeOEkJEmDp0OGoQkBpC')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-0 left-0 p-3 w-full">
+<p class="text-white font-bold text-sm">Jessica, 22</p>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 shadow-md">
+<span class="material-symbols-outlined text-xs">lock</span>
+</div>
+</div>
+<!-- Liked User Card 3 (Blurred) -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center blur-md scale-110" data-alt="Blurred profile photo of a woman in sunglasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYYpwd8pQwZeSkmbvg23-j7iTYsgEEtOTC6Ubr-KqyMjPUw06J92UztwvGGiTUH6gVgdkp04TBIcVz6c8aUYoN0WfD7nWmmkKTLIhqS1bcjC-lZc_jmZd2O0iTAwCn3oAZ5f2cVe-0W0add0HZwWIve8Bld9pv6oJDgsT4Mohe7X0FeriYDG74VNNEOrc5ygefendQrhBNBE_cQxv6IQgvSQE8kKZhkQbQKUczLQwgKlmydbat-PI3MkZ218alTydn0Djb7MlYnlQ5')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-0 left-0 p-3 w-full">
+<p class="text-white font-bold text-sm">Chloe, 26</p>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 shadow-md">
+<span class="material-symbols-outlined text-xs">lock</span>
+</div>
+</div>
+<!-- Liked User Card 4 (Blurred) -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center blur-md scale-110" data-alt="Blurred profile photo of a person with colorful lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsPjX1qMX7EGlrA4XrsL8YN4uRdE1Kebx5fc2TBl6J-PgMlLlfRw1AMHVHQcX-AX2E6Zh23pnQqPSwNBykH6XZMKd-11k87ei_I0He7NhvFPfhM9ZJ17slucYc3MvMLtIyKAeRVK8bgY8RKwXNRi7ZlnWhcJQar_QNzydFMwAAt6AMYnLNQQVAAL9AwAy_wS0C5_4RDuCuvqQNrrD9o_hlGDLZX5DYacKslIre65YRFYVc-fFQkXdt6fwVigUQe_13sXFMmc9CHi3n')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-0 left-0 p-3 w-full">
+<p class="text-white font-bold text-sm">Sarah, 25</p>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-white rounded-full p-1 shadow-md">
+<span class="material-symbols-outlined text-xs">lock</span>
+</div>
+</div>
+</div>
+<!-- Recent Matches Section -->
+<div class="px-4 pt-6 pb-3">
+<h2 class="text-lg font-bold">Recent Matches</h2>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 no-scrollbar">
+<!-- Match Bubble 1 -->
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="size-16 rounded-full p-0.5 bg-gradient-to-tr from-primary to-orange-400">
+<div class="size-full rounded-full border-2 border-background-light dark:border-background-dark overflow-hidden">
+<img class="size-full object-cover" data-alt="Clear profile photo of a new match smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6w_4JcMreqlYK9PyC-GfXSk8tgEa0R_WNC02Pb2GE-RBJfx4PIux7ve4kx66lvq-tJFg1vj0w-db3MMgpzYTD9s-qVJGQqjTEPHtdsY07nwyzMjBrPo1jS5e9ioFCUqj-ysT0zB37jBS2a_fyengIuvgWfPuOrMmgGeK_zQNtLcWBcQ1VFOnVQVOG2zuz21ufd1FCbPdVSZ3Vh-gB88IeahNWJGv3Faedg54g-Tsvy_Uj96z01E8XFG1YnPhuB8kqfhEWkKpINH2D"/>
+</div>
+</div>
+<span class="text-xs font-semibold">Elena</span>
+</div>
+<!-- Match Bubble 2 -->
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="size-16 rounded-full p-0.5 bg-gradient-to-tr from-primary to-orange-400">
+<div class="size-full rounded-full border-2 border-background-light dark:border-background-dark overflow-hidden">
+<img class="size-full object-cover" data-alt="Clear profile photo of a match in natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmj06KKdVuMV_XLp1rpO3SLLrw5gAQ1zwQ10rWNE6hZmFEdD5LyBD1xx0zmFrfI__il7u-Y-JSSb2Q-fcDGy5FkvxNMPIv_xxZKT-TYYIT5gGEBwvbo01PnW2DrVtFrOpdA5rtKGLOwt6xJEwuoh3tpF1GBSw0v4EG4pmFFzbg_w_sIVo9rcHXbvWfI4UmyINreBOzXmCGgC7whHY0gYuL--IndPyNzH8tNCS90t7yXpLqimcWtLZ0EbO-3BiD0RbhGFYGpQZis4Ga"/>
+</div>
+</div>
+<span class="text-xs font-semibold">Sophie</span>
+</div>
+<!-- Match Bubble 3 -->
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="size-16 rounded-full p-0.5 bg-slate-200 dark:bg-slate-700">
+<div class="size-full rounded-full border-2 border-background-light dark:border-background-dark overflow-hidden">
+<img class="size-full object-cover" data-alt="Clear profile photo of a mutual match" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6qwyBKnG3N1aYRelyUss7g2wfEOZYiiMUe2CxI8rfiyKYd1A3qR5Bs_TnbJm_J8H8mkPswxAvUb7I3AbV6Xk2BKbJH0cGj4PR5Cg8sBbKjPYxSDCgK7itrSybmOMooNW4sZvl7bn8PouLXXLtHZ1DrtosfY3njagLnklvuFpJGrCARgkRP_2K9pKQnSNJdmwdZQjuNif7BR0oQNGWtW6WlSlRbHiD4aSrp9k0Qhd7qaeBN7h_Kz4ScbKlJk43HZBkZk0fKSiZS7vZ"/>
+</div>
+</div>
+<span class="text-xs font-semibold">Maya</span>
+</div>
+<!-- Match Bubble 4 -->
+<div class="flex flex-col items-center gap-1 shrink-0">
+<div class="size-16 rounded-full p-0.5 bg-slate-200 dark:bg-slate-700">
+<div class="size-full rounded-full border-2 border-background-light dark:border-background-dark overflow-hidden">
+<img class="size-full object-cover" data-alt="Clear profile photo of a mutual match" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHNYROTPRBzk0xw5CqZHj3n90WFYM-_t71QKCXJZHXWaMK0s1Hr4gzBZCUIJ5QqsKVarnpHHV85Dj4ep9Udfd2GehgSIJbwlF7XMgry4TwIUZlN2Ij2fVVb5KAYv63lJbxyq_MSaoJThRv0Lj6G4XJDWUeUQ2hiVFeKl2bYUJmymE151TwpF6ptcs97thPq663V_JbNeb7wrwB9v84LdDTnwmWt6V9AcqH1Wv6ZCT0iTw6fAR6LAWkVb_k22C__sUJ2sX1grQ2A_83"/>
+</div>
+</div>
+<span class="text-xs font-semibold">James</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-primary/10 pb-6 pt-2">
+<div class="max-w-md mx-auto flex justify-around items-center px-4">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">style</span>
+<span class="text-[10px] font-bold">Discover</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">favorite</span>
+<span class="text-[10px] font-bold">Likes</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="absolute -top-1 -right-1 size-2.5 bg-primary rounded-full border-2 border-background-light dark:border-background-dark"></span>
+</div>
+<span class="text-[10px] font-bold">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>
