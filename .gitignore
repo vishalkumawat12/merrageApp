@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Auto-added for clean backup
+build/
+*/build/
+**/build/
+.kotlin
